@@ -1,9 +1,8 @@
-var sshKeysPage = require('./sshKeysPage');
 var homePage = require('./homePage'),
     codePage = require('./codePage'),
     pastiePage = require('./pastiePage'),
     pastiesPage = require('./pastiesPage'),
-    videoPage = require('./videoPage'),
+    videoPage = require('./videoPage');
 
 var PageFactory = function(world){
 
