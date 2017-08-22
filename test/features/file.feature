@@ -4,12 +4,12 @@ Feature: Working with project files
 
   Background:
   Given I navigate to the 'home' page
-  Then I am on page with the title 'Projects · Dashboard · GitLab'
-  And I click on 'newProjectButton'
-  And I get to 'new-project' page
-  Then I am on page with the title 'New Project · GitLab'
+  #Then I am on page with the title 'Projects · Dashboard · GitLab'
+  #And I click on 'newProjectButton'
+  #And I get to 'new-project' page
+  #Then I am on page with the title 'New Project · GitLab'
 
-  @file@project@all
+  @all
     Scenario: Add README.md file to the empty project
     #precondition
     And I fill field 'projectName' with the value 'project-for-readme'

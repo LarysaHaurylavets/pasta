@@ -5,7 +5,8 @@ var {
 defineSupportCode(function({Given,When,Then}) {
 
 	When(/^I authorize$/, function() {
-		return this.pageFactory.currentPage.authorize();
+		// return this.pageFactory.currentPage.authorize();
+		return this.pageFactory.currentPage.login();
 	});
 
 	Given(/^I am on page with the title '(.+)'$/, function(expectedTitle) {
