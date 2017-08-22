@@ -1,5 +1,5 @@
 const BasePage = require('./BasePage.js');
-const uploader = require('../support/uploadUI.js');
+const uploader = require('../uploadUI.js');
 
 class HomePage extends BasePage {
 
@@ -27,7 +27,7 @@ class HomePage extends BasePage {
     setExpirationDate(expiration) {
         return this.expirationDropdown['expiration' + expiration].click();
     }
-    
+
     setDescription(text) {
         return this.descriptionField.sendKeys(text);
     }
