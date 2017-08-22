@@ -37,7 +37,7 @@ class HomePage extends BasePage {
         return this.uploadGo()
             .then(() => uploader(fileType))
             .then(() => {
-                browser.sleep(3000);
+                return browser.sleep(3000);
             });
     }
 

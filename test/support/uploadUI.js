@@ -17,9 +17,9 @@ var filePaths = {
 };
 
 var upload = function(fileType) {
-	exec('./support/exe/upload.exe', [path.resolve(__dirname, filePaths[fileType])], function(err, data) {
-        //console.log(err);
-        //console.log(data.toString());
+	exec('./test/support/exe/upload.exe', [path.resolve(__dirname, filePaths[fileType])], function(err, data) {
+        console.log(err);
+        console.log(data.toString());
     });
 };
 
