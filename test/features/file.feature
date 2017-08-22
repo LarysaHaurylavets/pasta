@@ -10,10 +10,10 @@ Feature: Working with project files
   #Then I am on page with the title 'New Project · GitLab'
 
   @all
-    Scenario: Add README.md file to the empty project
+    Scenario: Upload valid size image
     #precondition
-    #And I fill field 'projectName' with the value 'project-for-readme'
-    #And I click on 'creationButton'
+    And I fill field 'projectName' with the value 'project-for-readme'
+    And I click on 'creationButton'
     #And I get to 'project' page
     #test
   #  And I click on 'readmeLink'
@@ -22,7 +22,7 @@ Feature: Working with project files
 #    And I click on 'commitChanges'
 #    And I get to 'file' page
 #    Then I check 'title' equal 'README.md'
-#    Then I check 'description' equal 'text for check'
+      Then I check 'description' equal 'text for check'
 #    #postcondition
 #    And I click on 'settingsTab'
 #    And I get to 'project-settings' page
