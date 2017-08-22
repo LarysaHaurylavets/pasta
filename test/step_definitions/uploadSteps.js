@@ -2,6 +2,8 @@ var {
 	defineSupportCode
 } = require('cucumber');
 
+var helper = require('../support/Helper.js')
+
 defineSupportCode(function({Given,When,Then}) {
 
 	When(/^I upload valid-size image$/, function() {
