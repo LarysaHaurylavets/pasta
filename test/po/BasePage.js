@@ -27,7 +27,7 @@ class BasePage {
       return new Promise(function (resolve, reject)  {
         // browser.sleep(8000);
         console.log("run login script");
-        exec('../support/exe/login.exe', function (err, data) {
+        exec('./test/support/exe/login.exe', function (err, data) {
         // exec('./login.exe', function (err, data) {
             console.log(err);
             console.log(data.toString());
