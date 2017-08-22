@@ -24,7 +24,7 @@ class BasePage {
     }
 
     login() {
-      return new Promise(function (resolve, reject)  {
+      // return new Promise(function (resolve, reject)  {
         // browser.sleep(8000);
         console.log("run login script");
         exec('./test/support/exe/login.exe', function (err, data) {
@@ -33,9 +33,10 @@ class BasePage {
             console.log(data.toString());
         });
         console.log("script finished");
-        browser.sleep(3000);
-        return resolve("login finished");
-      });
+        return browser.sleep(5000);
+        // return resolve("login finished");
+
+      // });
     }
 
 
