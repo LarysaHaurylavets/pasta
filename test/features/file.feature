@@ -5,7 +5,7 @@ Feature: Working with project files
   Background:
   Given I navigate to the 'home' page
   #Then I am on page with the title 'Projects · Dashboard · GitLab'
-  #And I click on 'newProjectButton'
+  When I authorize
   #And I get to 'new-project' page
   #Then I am on page with the title 'New Project · GitLab'
 

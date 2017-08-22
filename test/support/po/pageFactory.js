@@ -10,7 +10,7 @@ var PageFactory = function(world){
 
     _this.currentPage = 'undefined';
 
-    _this.getPage = function(page){
+    _this.getPage = function(page) {
         var pages = {
             'home': homePage,
             'code' : codePage,
@@ -18,7 +18,7 @@ var PageFactory = function(world){
             'pasties' : pastiesPage,
             'video' : videoPage,
         };
-        if(!pages[page]){
+        if(!pages[page]) {
             throw new Error('Wrong page name: '+pages[page]);
         }
         _this.currentPage = new pages[page](world);
