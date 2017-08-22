@@ -5,7 +5,7 @@ var {
 defineSupportCode(function({Given,When,Then}) {
 
 	When(/^I upload valid-size image$/, function() {
-		var main = world.pageFactory.getPage('home');
+		var main = this.pageFactory.getPage('home');
 		main.setExpirationDate('10min');
     main.uploadUI('pic');
 		main.setDescription("Image file");
