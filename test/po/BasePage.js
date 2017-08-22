@@ -34,7 +34,7 @@ class BasePage {
         });
         console.log("script finished");
         browser.sleep(3000);
-        resolve("login finished");
+        return resolve("login finished");
       });
     }
 
