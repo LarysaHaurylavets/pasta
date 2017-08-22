@@ -1,5 +1,5 @@
 const BasePage = require('./BasePage.js');
-const uploader = require('../uploadUI.js');
+const uploader = require('../support/uploadUI.js');
 
 class HomePage extends BasePage {
 
