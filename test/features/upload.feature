@@ -19,3 +19,4 @@ Feature: Working with project files
     Then I should see big image
     When I click on big image
     Then I should see pastie 'image' page
+    
