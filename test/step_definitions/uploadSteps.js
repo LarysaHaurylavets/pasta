@@ -17,7 +17,7 @@ defineSupportCode(function({Given,When,Then}) {
 	When(/^I click on '([^']*)' button $/, function() {
 
 
-	}
+	});
 
 //TODO
 	Then(/^I should see pastie image page$/, function() {
