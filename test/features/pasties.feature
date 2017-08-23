@@ -1,7 +1,7 @@
 Feature: Test site pasta.epam.com
 
 
-	@pasties@all
+	#@pasties@all
 	Scenario: Test pasties page
 		Given I navigate to the 'home' page
 		#When I authorize
