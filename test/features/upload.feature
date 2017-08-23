@@ -9,7 +9,7 @@ Feature: Working with project files
   #And I get to 'new-project' page
 #  Then I am on page with the title ''
 
-  @all@img
+  #@all@img
     Scenario: Upload valid size image
     #precondition
     When I upload valid-size image with expiration date '10min' and description 'Image file'

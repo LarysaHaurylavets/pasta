@@ -4,7 +4,7 @@ Feature: Test site pasta.epam.com
 	Scenario: Test pasties page
 		Given I navigate to the 'home' page
 		#When I authorize
-		Then title should be 'Pasta'
+		Then title should be 'PASTA'
 		When I click on button pasties
 		Then I should see a collection of pasties
 		When I choose ID of pastie

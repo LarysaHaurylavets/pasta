@@ -1,13 +1,14 @@
 var {defineSupportCode} = require('cucumber');
 
 var pageFactory = require('../po/pageFactory.js');
+var header = require('../po/ui/Header.js');
 //var pastiesPage = require('../po/pastiesPage.js');
 
 
 defineSupportCode(function({When,Then}) {
 
 	When(/^I click on button pasties$/, function () {
-        return pageFactory.currentPage.getHeader().clickPasties();
+        return pageFactory.currentPage.header.clickPasties();
     });
 
 	Then(/^I should see a collection of pasties$/, function () {
