@@ -20,9 +20,13 @@ class ImagePage extends PastiePage {
 	bigImageIsVisible() {
 		let modalWindow = browser.$('div.modal-window');
 		return modalWindow.getAttribute('style')
-			.then((text) => {
-				return (text === "display: block;")
-			});
+			// .then((text) => {
+			// 	return (text === "display: block;")
+			// });
+	}
+
+	getWindowLocator() {
+		return "display: block;";
 	}
 
 	getImageURL() {
@@ -42,11 +46,16 @@ class ImagePage extends PastiePage {
 				})
 				.then(() => {
 					save('pic');
-					//console.log("img saved");
-					// browser.sleep(3000);
-					resolve("downloaded");
+					return browser.sleep(3000);
+				})
+				.then(() => {
+					return browser.navigate().back();
+				})
+				.then(() => {
+					return resolve("downloaded");
 				});
 		});
 	}
+
 }
 module.exports = ImagePage;

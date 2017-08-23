@@ -14,10 +14,10 @@ defineSupportCode(function({Given,When,Then}) {
 	});
 
 	Then(/^title should be '([^']*)'$/, function (pageTitle) {
-        return this.pageFactory.currentPage.getPageTitle()
-        	.then((title)=>{
-        		return expect(title).to.equal(pageTitle);
-        	});
-	});		
+	  return this.pageFactory.currentPage.getPageTitle()
+	  	.then((title)=>{
+	  		return expect(title).to.equal(pageTitle);
+	  	});
+	});
 
 });

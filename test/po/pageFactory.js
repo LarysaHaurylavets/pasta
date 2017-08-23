@@ -2,7 +2,8 @@ var homePage = require('./homePage'),
     codePage = require('./codePage'),
     pastiePage = require('./pastiePage'),
     pastiesPage = require('./pastiesPage'),
-    videoPage = require('./videoPage');
+    videoPage = require('./videoPage'),
+    imagePage = require('./imagePage');
 
 var PageFactory = function(world){
 
@@ -17,6 +18,7 @@ var PageFactory = function(world){
             'pastie' : pastiePage,
             'pasties' : pastiesPage,
             'video' : videoPage,
+            'image' : imagePage,
         };
         if(!pages[page]) {
             throw new Error('Wrong page name: '+pages[page]);
