@@ -1,5 +1,6 @@
 Feature: Test site pasta.epam.com
 
+
 	@pasties@all
 	Scenario: Test pasties page
 		Given I navigate to the 'home' page
@@ -9,3 +10,4 @@ Feature: Test site pasta.epam.com
 		Then I should see a collection of pasties
 		When I choose ID of pastie
 		Then page with particular pastie should be displayed
+
