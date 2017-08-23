@@ -30,6 +30,6 @@ defineSupportCode(function({When,Then}) {
     });
 
 	Then(/^page with particular pastie should be displayed$/, function () {
-        
+        return this.pageFactory.getPage('pastie');
     });
 });
