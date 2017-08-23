@@ -18,10 +18,6 @@ defineSupportCode(function({Given,When,Then}) {
         	.then((title)=>{
         		return expect(title).to.equal(pageTitle);
         	});
-	});	
-
-	
-
-	
+	});		
 
 });
