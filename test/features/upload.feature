@@ -8,7 +8,7 @@ Feature: Working with project files
   @all@img
     Scenario: Upload valid size image
     Given I navigate to the 'home' page
-    When I authorize
+    #When I authorize
     Then title should be 'Pasta'
     #precondition
     When I upload valid-size image with expiration date '10min' and description 'Image file'
