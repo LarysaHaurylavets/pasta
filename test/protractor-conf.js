@@ -3,7 +3,7 @@ var protractor = require("protractor");
 
 exports.config = {
 	seleniumAddress: "http://localhost:4444/wd/hub",
-	baseUrl: "https://git.epam.com/",
+	baseUrl: "https://pasta.lab.epam.com/",
 	capabilities: {
 		browserName: process.env.BROWSER
 	},
