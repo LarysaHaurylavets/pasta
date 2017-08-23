@@ -29,7 +29,7 @@ class BasePage {
         console.log("run login script");
         exec('./test/support/exe/login.exe', function (err, data) {
         // exec('./login.exe', function (err, data) {
-            console.log(err);
+            // console.log(err);
             console.log(data.toString());
         });
         console.log("script finished");
