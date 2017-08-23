@@ -6,21 +6,44 @@ var helper = require('../support/Helper.js')
 
 defineSupportCode(function({Given,When,Then}) {
 
-	When(/^I upload valid-size image$/, function() {
+	When(/^I upload valid-size image with expiration date '([^']*)' and description '([^']*)'$/, function(exp, desc) {
 		var main = this.pageFactory.getPage('home');
-		main.setExpirationDate('10min');
+		main.setExpirationDate(exp);
     main.uploadUI('pic');
-		main.setDescription("Image file");
+		main.setDescription(desc);
   	return helper.waitForAndClick(main.shareButton, helper.waitForVisible);
 	});
 
+	When(/^I click on '([^']*)' button $/, function() {
+
+
+	}
+
+//TODO
 	Then(/^I should see pastie image page$/, function() {
 		  // expect(imgPage.bigImageIsVisible()).toBeFalsy();
-			return browser.sleep(10000);
+			return browser.sleep(2000);
 	});
 
-	When(/^I have my project created with the name '([^']*)' and visible private$/, function(projectName) {
-		return this.pageFactory.currentPage.checkProjectVisibility(projectName);
+	Then(/^I should see the same quality image as was uploaded$/, function() {
+		//download img for comparison
+	      imgPage.saveIMG()
+	      	.then(function (msg) {
+	          console.log("image:", msg);
+	           helper.pauseFor(3000)
+
+	        .then(() => {
+	          var comparisonResult = compare('./filesToUpload/pic_downloaded.jpg', './filesToUpload/pic.jpg');
+						return expect(comparisonResult).isTrue('uploaded image is OK');
+	        })
+	       });
+
+			// return browser.sleep(2000);
+	});
+
+	When(/^I click on image preview'([^']*)' $/, function(projectName) {
+
+
 	});
 
 
