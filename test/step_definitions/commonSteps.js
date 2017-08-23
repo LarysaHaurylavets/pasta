@@ -10,7 +10,7 @@ defineSupportCode(function({Given,When,Then}) {
 	});
 
 	Given(/^I am on '([^']*)' page$/, function (page) {
-        return this.pageFactory.getPageObjects(page).visit(pageFactory.currentPage._data.url);
+        return this.pageFactory.getPage(page).visit();
 	});
 
 	Then(/^title should be '([^']*)'$/, function (pageTitle) {
