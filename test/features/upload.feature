@@ -2,12 +2,10 @@ Feature: Working with project files
   As a user
   I can add files to the project
 
-  #Background:
-  #Given I navigate to the 'home' page
-  #Then I am on page with the title 'Projects · Dashboard · GitLab'
-  #When I authorize
-  #And I get to 'new-project' page
-#  Then I am on page with the title ''
+  Background:
+  Given I navigate to the 'home' page
+  When I authorize
+  Then title should be 'Pasta'
 
   @all@img
     Scenario: Upload valid size image
