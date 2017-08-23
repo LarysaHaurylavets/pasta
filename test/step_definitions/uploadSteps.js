@@ -8,13 +8,13 @@ var compare = require('../support/fileComparator.js');
 defineSupportCode(function({Given,When,Then}) {
 
 	When(/^I upload valid-size image with expiration date '([^']*)' and description '([^']*)'$/, function(exp, desc) {
-		// var main = this.pageFactory.getPage('home');
-		// main.setExpirationDate(exp);
-    // main.uploadUI('pic');
-		// main.setDescription(desc);
-  	// return helper.waitForAndClick(main.shareButton, helper.waitForVisible);
+		var main = this.pageFactory.getPage('home');
+		main.setExpirationDate(exp);
+    main.uploadUI('pic');
+		main.setDescription(desc);
+  	return helper.waitForAndClick(main.shareButton, helper.waitForVisible);
 
-		return browser.get('https://pasta.lab.epam.com/pasties/szz5drmu');
+		// return browser.get('https://pasta.lab.epam.com/pasties/szz5drmu');
 	});
 
 	When(/^I click on '([^']*)' button $/, function() {
@@ -67,7 +67,5 @@ defineSupportCode(function({Given,When,Then}) {
 	When(/^I click on big image$/, function() {
 		return this.pageFactory.currentPage.closePreview();
 	});
-
-
 
 });
