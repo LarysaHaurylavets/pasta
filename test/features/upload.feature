@@ -5,7 +5,7 @@ Feature: Working with project files
   Background:
 
 
-  @all@img
+  #@all@img
     Scenario: Upload valid size image
     Given I navigate to the 'home' page
     When I authorize
