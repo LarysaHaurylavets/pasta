@@ -9,27 +9,18 @@ defineSupportCode(function({Given,When,Then}) {
 		return this.pageFactory.currentPage.login();
 	});
 
-	Given(/^I am on page with the title '(.+)'$/, function(expectedTitle) {
-		return this.pageFactory.currentPage.getTitle()
-			.then((title) => {
-				return expect(title).to.equal(expectedTitle);
-			});
+	Given(/^I am on "([^"]*)" page$/, function (page) {
+        return pageFactory.getPageObjects(page).visit(pageFactory.currentPage._data.url);
 	});
 
-	When(/^I fill field '([^']*)' with the value '([^']*)'$/, function(fieldName, value) {
-		return this.pageFactory.currentPage.fillField(fieldName, value);
-	});
+	Then(/^title should be "([^"]*)"$/, function (pageTitle) {
+        return pageFactory.currentPage.checkPageTitle(pageTitle);
+	});	
 
 	When(/^I click on '([^']*)'$/, function(elementName) {
 		return this.pageFactory.currentPage.clickOn(elementName);
 	});
 
-	When(/^I get to '([^']*)' page$/, function(pageName) {
-		return this.pageFactory.getPage(pageName);
-	});
-
-	Then(/^I check '([^']*)' equal '([^']*)'$/, function(fieldName, value) {
-		return this.pageFactory.currentPage.checkValueOfTheElement(fieldName, value);
-	});
+	
 
 });
