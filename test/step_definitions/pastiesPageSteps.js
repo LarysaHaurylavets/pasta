@@ -2,10 +2,12 @@ var {
 	defineSupportCode
 } = require('cucumber');
 
-defineSupportCode(function({Given,When,Then}) {
+defineSupportCode(function({Then}) {
 
-	Then(/^page with particular pastie should be displayed$/, function () {
-        //return pageFactory.currentPage.userPageShouldBeDisplayed();
+	Then(/^I should see a collection of pasties$/, function () {
+        return pageFactory.currentPage.getPastiesAmount().then((number)=>{
+        	expect(number).to.be.above(0);
+        });
     });
 
 	

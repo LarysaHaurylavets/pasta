@@ -14,7 +14,10 @@ defineSupportCode(function({Given,When,Then}) {
 	});
 
 	Then(/^title should be "([^"]*)"$/, function (pageTitle) {
-        return pageFactory.currentPage.checkPageTitle(pageTitle);
+        return pageFactory.currentPage.getPageTitle()
+        	.then((title)=>{
+        		return expect(title).to.equal(pageTitle);
+        	});
 	});	
 
 	When(/^I click on '([^']*)'$/, function(elementName) {
