@@ -9,7 +9,7 @@ Feature: Working with project files
     Scenario: Upload valid size image
     Given I navigate to the 'home' page
     When I authorize
-    Then title should be 'Pasta'
+    Then title should be 'PASTA'
     #precondition
     When I upload valid-size image with expiration date '10min' and description 'Image file'
   #test
