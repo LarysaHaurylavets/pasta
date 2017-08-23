@@ -20,11 +20,16 @@ defineSupportCode(function({When,Then}) {
         });
     });
 
-    // When(/^I choose ID of pastie$/, function () {
-    //     return this.pageFactory.currentPage.pastiesID.first().getText().then((id)=>{
-    //         pageFactory.currentPage.choosePastie(id);
-    //     });
-    // });
+    When(/^I choose ID of pastie$/, function () {
+        return this.pageFactory.currentPage.pastiesID.first().getText().then((id)=>{
+            return this.pageFactory.currentPage.choosePastie(id)
+                .then(()=>{
+                    return browser.sleep(1000);
+                });
+        });
+    });
 
-	
+	Then(/^page with particular pastie should be displayed$/, function () {
+        
+    });
 });
