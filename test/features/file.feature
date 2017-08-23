@@ -2,14 +2,14 @@ Feature: Working with project files
   As a user
   I can add files to the project
 
-  Background:
-  Given I navigate to the 'home' page
+  #Background:
+  #Given I navigate to the 'home' page
   #Then I am on page with the title 'Projects · Dashboard · GitLab'
-  When I authorize
+  #When I authorize
   #And I get to 'new-project' page
 #  Then I am on page with the title ''
 
-  @all
+#  @all
     Scenario: Upload valid size image
     #precondition
     When I upload valid-size image
