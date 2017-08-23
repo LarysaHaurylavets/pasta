@@ -2,7 +2,7 @@ Feature: Test site pasta.epam.com
 
 	@pasties@all
 	Scenario: Test pasties page
-		Given I navigate to the "home" page
+		Given I navigate to the 'home' page
 		When I authorize
 		Then title should be "Pasta"
 		When I click on "Pasties"
