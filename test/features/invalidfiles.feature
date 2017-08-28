@@ -11,7 +11,7 @@ Feature: Test site pasta.epam.com
 		Then I should see message 'Size limit for text is 500kB'
 
 
-@all @autoit
+@autoit
 		Scenario: Test pasties page
 			Given I navigate to the 'home' page
 			When I authorize
