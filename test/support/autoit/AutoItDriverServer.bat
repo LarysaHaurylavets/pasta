@@ -9,5 +9,5 @@ for /f "usebackq tokens=2 delims=:" %%f in (`ipconfig ^| findstr /c:%ip_address_
 	echo AutoItDriverServer will be started on this IP adress...
     set thisip=%%f
 )
-python server.py -a %thisip%
+python test/support/autoit/server.py -a %thisip%
 pause
