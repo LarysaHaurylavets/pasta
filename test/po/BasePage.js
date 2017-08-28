@@ -12,7 +12,10 @@ class BasePage {
     }
 
     visit() {
-        return browser.get('https://pasta.lab.epam.com/' + this.url);
+        // return browser.get('https://pasta.lab.epam.com/' + this.url);
+
+        //TODO remove
+        return browser.get('http://www.httpwatch.com/httpgallery/authentication/');
     }
 
     getPageTitle() {
@@ -23,7 +26,7 @@ class BasePage {
         return browser.getCurrentUrl();
     }
 
-    login() {
+    _login() {
       // return new Promise(function (resolve, reject)  {
         // browser.sleep(8000);
         console.log("run login script");
@@ -37,6 +40,28 @@ class BasePage {
         // return resolve("login finished");
 
       // });
+    }
+
+    login() {
+      browser.getTitle()
+        .then((txt) => console.log('title', txt));
+      browser.findElement(By.css('#displayImage')).click();
+
+      var webdriver = require('selenium-webdriver');
+      var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+
+      ad.switchTo().window("Authentication Required");
+      ad.actions().sendKeys("{TAB}").perform();
+      browser.sleep(500);
+      ad.actions().sendKeys("variable").perform();
+      browser.sleep(500);
+      ad.actions().sendKeys("{TAB}").perform();
+      browser.sleep(500);
+      ad.actions().sendKeys("send help").perform();
+      browser.sleep(500);
+      ad.actions().sendKeys("{ENTER}").perform();
+      browser.sleep(5000);
+
     }
 
 
