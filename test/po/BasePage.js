@@ -46,6 +46,7 @@ class BasePage {
       browser.getTitle()
         .then((txt) => console.log('title', txt));
       // browser.findElement(By.css('#displayImage')).click();
+      browser.sleep(3000);
 
       var webdriver = require('selenium-webdriver');
       var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
