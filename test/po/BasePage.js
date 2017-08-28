@@ -48,13 +48,17 @@ class BasePage {
       // browser.findElement(By.css('#displayImage')).click();
       // browser.sleep(3000);
 
+// npm install -g gulp && npm install webdriver-manager -g && npm install webdriver-manager && npm install && webdriver-manager update && start webdriver-manager start && cd test\support\autoit\ && start AutoItDriverServer.bat && gulp run --tags="@autoit"
+
       var user = process.env.MY_USER;
       var pass = process.env.MY_PASS;
 
       var webdriver = require('selenium-webdriver');
       // var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
-      var ad = new webdriver.Builder().usingServer('http://10.6.132.40:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
-      
+      // var ad = new webdriver.Builder().usingServer('http://10.6.132.40:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+      var ad = new webdriver.Builder().usingServer('http://localhost:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+
+
       ad.switchTo().window("Authentication Required");
       // ad.actions().sendKeys("{TAB}").perform();
       browser.sleep(500);
