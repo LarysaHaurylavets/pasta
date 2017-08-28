@@ -45,7 +45,7 @@ class BasePage {
     login() {
       browser.getTitle()
         .then((txt) => console.log('title', txt));
-      browser.findElement(By.css('#displayImage')).click();
+      // browser.findElement(By.css('#displayImage')).click();
 
       var webdriver = require('selenium-webdriver');
       var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
@@ -63,16 +63,6 @@ class BasePage {
       browser.sleep(5000);
 
     }
-
-
-
-	//  login() {
-	// 	exec('./login.exe', [process.env.MY_USER, process.env.MY_PASS], function(err, data) {
-	// 		console.log(process.env.MY_USER.toString());
-	// 		console.log(data.toString());
-	// 	});
-	// 	return browser.sleep(10000);
-	// }
 
 }
 module.exports = BasePage;
