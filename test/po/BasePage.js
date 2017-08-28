@@ -57,11 +57,11 @@ class BasePage {
       ad.switchTo().window("Authentication Required");
       // ad.actions().sendKeys("{TAB}").perform();
       browser.sleep(500);
-      ad.actions().sendKeys("variable").perform();
+      ad.actions().sendKeys(user).perform();
       browser.sleep(500);
       ad.actions().sendKeys("{TAB}").perform();
       browser.sleep(500);
-      ad.actions().sendKeys("send help").perform();
+      ad.actions().sendKeys(pass).perform();
       browser.sleep(500);
       ad.actions().sendKeys("{ENTER}").perform();
       browser.sleep(5000);
