@@ -12,10 +12,10 @@ class BasePage {
     }
 
     visit() {
-        // return browser.get('https://pasta.lab.epam.com/' + this.url);
+        return browser.get('https://pasta.lab.epam.com/' + this.url);
 
-        //TODO remove
-        return browser.get('http://www.httpwatch.com/httpgallery/authentication/');
+        // //TODO remove
+        // return browser.get('http://www.httpwatch.com/httpgallery/authentication/');
     }
 
     getPageTitle() {
