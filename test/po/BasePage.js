@@ -46,13 +46,13 @@ class BasePage {
       browser.getTitle()
         .then((txt) => console.log('title', txt));
       // browser.findElement(By.css('#displayImage')).click();
-      browser.sleep(3000);
+      // browser.sleep(3000);
 
       var webdriver = require('selenium-webdriver');
       var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
 
       ad.switchTo().window("Authentication Required");
-      ad.actions().sendKeys("{TAB}").perform();
+      // ad.actions().sendKeys("{TAB}").perform();
       browser.sleep(500);
       ad.actions().sendKeys("variable").perform();
       browser.sleep(500);
