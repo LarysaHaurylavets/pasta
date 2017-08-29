@@ -13,9 +13,9 @@ defineSupportCode(function({When,Then}) {
     Then(/^I should see message '([^']*)'$/, function (message) {
        return this.pageFactory.currentPage.invalidSizeAlert.getText()
         .then((text)=>{
-            return expect(text).to.equal(message);            
-            	
+            return expect(text).to.equal(message);             	
         });
+        
     });
     
 });

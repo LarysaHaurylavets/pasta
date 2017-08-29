@@ -16,9 +16,9 @@ var filePaths = {
 
 var upload = function(fileType){
 	ad.switchTo().window("Open");
-	browser.sleep(500);
+	browser.sleep(100);
 	ad.actions().sendKeys([path.resolve(__dirname, filePaths[fileType])]).perform();
-	browser.sleep(500);
+	//browser.sleep(500);
 	ad.actions().sendKeys("{ENTER}").perform();
 	//browser.sleep(1000);
 };
