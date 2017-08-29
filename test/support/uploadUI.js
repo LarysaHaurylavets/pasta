@@ -10,11 +10,11 @@ var webdriver = require('selenium-webdriver');
 // var ad = new webdriver.Builder().usingServer('http://10.6.97.105:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
 
 
-//setup manually 
+//setup manually
 process.env.SELENIUM_REMOTE_URL = 'http://10.6.96.243:4723/wd/hub';
 
 // eugen
-var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+var ad = new webdriver.Builder().usingServer().withCapabilities({'browserName': 'AutoIt' }).build();
 
 
 var filePaths = {
