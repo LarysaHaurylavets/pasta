@@ -19,7 +19,7 @@ var upload = function(fileType){
 	browser.sleep(100);
 	ad.actions().sendKeys([path.resolve(__dirname, filePaths[fileType])]).perform();
 	//browser.sleep(500);
-	return ad.actions().sendKeys("{ENTER}").perform();
+	ad.actions().sendKeys("{ENTER}").perform();
 	//return browser.sleep(1000);
 };
 
