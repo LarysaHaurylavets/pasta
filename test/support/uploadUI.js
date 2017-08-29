@@ -16,11 +16,11 @@ var filePaths = {
 
 var upload = function(fileType){
 	ad.switchTo().window("Open");
-	browser.sleep(1000);
+	browser.sleep(500);
 	ad.actions().sendKeys([path.resolve(__dirname, filePaths[fileType])]).perform();
-	browser.sleep(1000);
+	browser.sleep(500);
 	ad.actions().sendKeys("{ENTER}").perform();
-	browser.sleep(2000);
+	//browser.sleep(1000);
 };
 
 module.exports = upload;

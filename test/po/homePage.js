@@ -11,7 +11,7 @@ class HomePage extends BasePage {
             'Share'));
         this.descriptionField = $('.input-description');
         this.contentBox = $('.workplace');
-        this.invalidSizeAlert = $('.toast-warning');
+        this.invalidSizeAlert = $('div.toast-message');                        //$('.toast-warning');    
         this.invalidSizeImgText = 'File size limit is 4MB';
         this.invalidSizeTxtText = 'Size limit for text is 500kB';
         this.expirationDropdown = {
@@ -37,7 +37,7 @@ class HomePage extends BasePage {
         return this.uploadGo()
             .then(() => uploader(fileType))
             .then(() => {
-                return browser.sleep(3000);
+                return browser.sleep(5000);
             });
     }
 

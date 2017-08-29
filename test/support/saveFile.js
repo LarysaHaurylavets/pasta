@@ -23,14 +23,14 @@ var save = function(fileType) {
 		};
 		
 		ad.actions().sendKeys("{CTRLDOWN}").sendKeys('s').sendKeys("{CTRLUP}").perform();
-		browser.sleep(2000);
+		browser.sleep(500);
 		ad.switchTo().window("Save As");
-		browser.sleep(2000);
+		browser.sleep(500);
 		
 		ad.actions().sendKeys([pth]).perform();
-		browser.sleep(2000);
+		browser.sleep(500);
 		ad.actions().sendKeys("{ENTER}").perform();
-		browser.sleep(2000);		
+		//browser.sleep(2000);		
 			
 
 };
