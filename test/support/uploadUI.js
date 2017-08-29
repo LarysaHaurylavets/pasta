@@ -1,11 +1,9 @@
 'use strict';
-var exec = require('child_process').execFile;
-var path = require('path');
 
-// usage
-//var uploader = require('../support/uploadUI');
-// $('button[type=submit]').click();
-// uploader('pic');
+var path = require('path');
+var webdriver = require('selenium-webdriver');
+
+var ad = new webdriver.Builder().usingServer('http://10.6.97.161:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
 
 var filePaths = {
 	'pic': './filesToUpload/pic.jpg',
@@ -16,11 +14,13 @@ var filePaths = {
 	'javascript' : './filesToUpload/JS_code.txt'
 };
 
-var upload = function(fileType) {
-	exec('./test/support/exe/upload.exe', [path.resolve(__dirname, filePaths[fileType])], function(err, data) {
-        console.log(err);
-        console.log(data.toString());
-    });
+var upload = function(fileType){
+	ad.switchTo().window("Open");
+	browser.sleep(1000);
+	ad.actions().sendKeys([path.resolve(__dirname, filePaths[fileType])]).perform();
+	browser.sleep(1000);
+	ad.actions().sendKeys("{ENTER}").perform();
+	browser.sleep(2000);
 };
 
 module.exports = upload;
