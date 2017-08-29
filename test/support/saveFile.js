@@ -1,7 +1,11 @@
 'use strict';
-var exec = require('child_process').execFile;
+
 var path = require('path');
 var fs = require('fs');
+
+var webdriver = require('selenium-webdriver');
+var ad = new webdriver.Builder().usingServer('http://10.6.97.161:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+
 
 var filePaths = {
 	'pic': './filesToUpload/pic_downloaded.jpg',
@@ -13,16 +17,21 @@ var filePaths = {
 
 var save = function(fileType) {
 	var pth = path.resolve(__dirname, filePaths[fileType]);
-
-		if(fs.existsSync(pth)) {
+	if(fs.existsSync(pth)) {
 			console.log('file ' + pth + ' already exists, will be removed...');
 			fs.unlinkSync(pth);
-		}
-
-	exec('./test/support/exe/ctrl-s.exe', [pth], function(err, data) {
-        // console.log(err);
-        console.log(data.toString());
-    });
+		};
+		
+		ad.actions().sendKeys("{CTRLDOWN}").sendKeys('s').sendKeys("{CTRLUP}").perform();
+		browser.sleep(2000);
+		ad.switchTo().window("Save As");
+		browser.sleep(2000);
+		
+		ad.actions().sendKeys([pth]).perform();
+		browser.sleep(2000);
+		ad.actions().sendKeys("{ENTER}").perform();
+		browser.sleep(2000);		
+			
 
 };
 
