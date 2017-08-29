@@ -54,7 +54,7 @@ class BasePage {
       var pass = process.env.MY_PASS;
 
       var webdriver = require('selenium-webdriver');
-      var ad = new webdriver.Builder().usingServer('http://ecsc0010468b:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+      // var ad = new webdriver.Builder().usingServer('http://ecsc0010468b:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
       // var ad = new webdriver.Builder().usingServer('http://127.0.0.1:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
 
 //REMOTE
