@@ -10,4 +10,3 @@ Feature: Test site pasta.epam.com
 		Then I should see a collection of pasties
 		When I choose ID of pastie
 		Then page with particular pastie should be displayed
-
