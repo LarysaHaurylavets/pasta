@@ -62,7 +62,7 @@ class BasePage {
       // var ad = new webdriver.Builder().usingServer('http://localhost:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
 
 //MY
-      // var ad = new webdriver.Builder().
+      var ad = new webdriver.Builder().
       usingServer('http://10.6.96.243:4723/').withCapabilities({'browserName': 'AutoIt' }).build();
 
       // var ad = new webdriver.Builder().usingServer('http://10.6.102.19:4723/').withCapabilities({'browserName': 'AutoIt' }).build();
