@@ -1,7 +1,7 @@
 'use strict';
 
 var path = require('path');
-var webdriver = require('selenium-webdriver');
+var webdriver = require('selenium-webdriver/remote');
 
 //larisa
 // var ad = new webdriver.Builder().usingServer('http://10.6.97.161:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
