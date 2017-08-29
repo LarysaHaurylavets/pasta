@@ -58,8 +58,8 @@ class BasePage {
       // var ad = new webdriver.Builder().usingServer('http://127.0.0.1:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
       // var ad = new webdriver.Builder().usingServer('http://10.6.132.40:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
       // var ad = new webdriver.Builder().usingServer('http://localhost:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
-      // var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/').withCapabilities({'browserName': 'AutoIt' }).build();
-      var ad = new webdriver.Builder().usingServer('http://10.6.102.19:4723/').withCapabilities({'browserName': 'AutoIt' }).build();
+      var ad = new webdriver.Builder().usingServer('http://10.6.96.243:4723/').withCapabilities({'browserName': 'AutoIt' }).build();
+      // var ad = new webdriver.Builder().usingServer('http://10.6.102.19:4723/').withCapabilities({'browserName': 'AutoIt' }).build();
 
 
       ad.switchTo().window("Authentication Required");
