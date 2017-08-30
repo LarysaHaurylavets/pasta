@@ -4,7 +4,7 @@ var path = require('path');
 var fs = require('fs');
 
 var webdriver = require('selenium-webdriver');
-var ad = new webdriver.Builder().usingServer('http://10.6.97.161:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+var ad = new webdriver.Builder().usingServer(AUTOIT_IP).withCapabilities({'browserName': 'AutoIt' }).build();
 
 
 var filePaths = {
@@ -21,17 +21,17 @@ var save = function(fileType) {
 			console.log('file ' + pth + ' already exists, will be removed...');
 			fs.unlinkSync(pth);
 		};
-		
+
 		ad.actions().sendKeys("{CTRLDOWN}").sendKeys('s').sendKeys("{CTRLUP}").perform();
 		browser.sleep(500);
 		ad.switchTo().window("Save As");
 		browser.sleep(500);
-		
+
 		ad.actions().sendKeys([pth]).perform();
 		browser.sleep(500);
 		ad.actions().sendKeys("{ENTER}").perform();
-		//browser.sleep(2000);		
-			
+		//browser.sleep(2000);
+
 
 };
 
