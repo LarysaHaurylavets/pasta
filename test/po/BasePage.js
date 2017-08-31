@@ -48,7 +48,7 @@ class BasePage {
 
   var webdriver = require('selenium-webdriver');
 //MY
-  var ad = new webdriver.Builder().usingServer('http://10.6.97.161:4723/wd/hub').withCapabilities({'browserName': 'AutoIt' }).build();
+  var ad = new webdriver.Builder().usingServer(AUTOIT_IP).withCapabilities({'browserName': 'AutoIt' }).build();
 
   ad.switchTo().window("Authentication Required");
   // ad.actions().sendKeys("{TAB}").perform();
