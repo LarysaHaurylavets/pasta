@@ -4,7 +4,7 @@ Feature: Working with project files
 
   Background:
     Given I navigate to the 'home' page
-  #  When I authorize
+    When I authorize
     Then title should be 'PASTA'
 
   @all@img
