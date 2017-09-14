@@ -6,7 +6,7 @@ function runProtractorConfig() {
 
 	gutil.env.browser ? process.env.BROWSER = gutil.env.browser : process.env.BROWSER = 'chrome';
 	gutil.env.tags ? process.env.TAGS = gutil.env.tags : process.env.TAGS = '@all';
-	gutil.env.autoit ? process.env.AUTOIT_HOST = gutil.env.autoit : process.env.AUTOIT_HOST = 'remote';
+	gutil.env.autoit ? process.env.AUTOIT_HOST = gutil.env.autoit : process.env.AUTOIT_HOST = 'larisa';
 
   return gulp.src("features/*.feature")
 		.pipe(protractor({
